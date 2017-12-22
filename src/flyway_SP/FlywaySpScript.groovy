@@ -1,5 +1,3 @@
-package flyway_SP
-
 node {
     def parentJob = 'flyway_SP_parent'
     def commonJob = 'flyway_SP_common'
