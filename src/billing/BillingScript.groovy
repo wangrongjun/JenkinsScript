@@ -1,13 +1,17 @@
+def localBilling = 'Local_Billing'
+def billingAutomation = 'Billing Automation for Daily Build_Local'
+
+stage "build $localBilling"
 node {
-    def localBilling = 'Local_Billing'
-    def billingAutomation = 'Billing Automation for Daily Build_Local'
-
-    stage "build $localBilling"
     build localBilling
+}
 
+stage 'confirm'
+node {
     input "$billingAutomation"
-    stage 'confirm'
+}
 
-    stage "build $billingAutomation"
+stage "build $billingAutomation"
+node {
     build billingAutomation
 }
