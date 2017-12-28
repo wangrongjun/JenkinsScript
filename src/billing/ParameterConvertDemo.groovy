@@ -1,3 +1,4 @@
+package billing
 // test-main 的构建化参数 MainVersion 设置默认值为1.0
 // 以下是 test-main [pipeline] job 的脚本
 def mainVersion = "$MainVersion"
